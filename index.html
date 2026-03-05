@@ -3,18 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mars Ventures — Launching Soon</title>
+  <title>MARS VENTURES — Launching Soon</title>
   <meta name="description" content="Mars Ventures is launching soon. Join the list." />
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Mars V" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Orbitron -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --headline-font: "Orbitron", sans-serif;
-      --body-font: "Montserrat", sans-serif;
+      --font-headline: "Science Gothic", sans-serif;
+      --font-body: "Montserrat", sans-serif;
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.70);
       --line: rgba(255,255,255,.22);
@@ -24,12 +31,18 @@
       --radius: 14px;
     }
 
+    body{
+      font-family: var(--font-body);
+    }
+    h1,h2,h3,.brandline{
+      font-family: var(--font-headline);
+    }
+
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
       margin:0;
       color:var(--text);
-      font-family:"Orbitron", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:#05070c;
       overflow:hidden;
     }
@@ -144,11 +157,11 @@
     }
 
     h1{
-      font-family: var(--headline-font);
+      font-family: var(--font-headline);
       margin:0 0 10px;
       font-size: clamp(30px, 3.4vw, 54px);
-      font-weight:800;
-      letter-spacing:.22em;
+      font-weight:400;
+      letter-spacing:.44em;
       text-transform:uppercase;
       text-shadow:
         0 0 14px rgba(255,255,255,.25),
