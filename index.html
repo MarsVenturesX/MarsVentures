@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/cursor.css">
 
   <style>
     :root{
@@ -388,5 +389,21 @@
       }
     });
   </script>
+  <!-- <script defer src="{{ '/assets/js/cursor.js' | relative_url }}"></script>
+
+    <script>
+      document.addEventListener("click", function(e) {
+      const link = e.target.closest("a");
+      if (!link) return;
+
+      if (link.href && link.href.startsWith("http")) {
+          gtag('event', 'click', {
+            event_category: 'outbound',
+            event_label: link.href
+          });
+        }
+      });
+    </script> -->
+    <script src="assets/js/cursor.js" defer></script>
 </body>
 </html>
