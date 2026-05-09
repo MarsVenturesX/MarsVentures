@@ -18,8 +18,100 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/cursor.css">
+   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
+    body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* ====================== PREMIUM INFINITE CYCLING SPACE BACKGROUND ====================== */
+.space-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Base styles */
+.bg-earth, .bg-nebula, .bg-stars {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+}
+
+/* ====================== EARTH - Slow Elegant Drift ====================== */
+.bg-earth {
+  background-image: url('assets/png/earth-horizon.png');
+  background-size: 155% 155%;
+  animation: 
+    cycleEarth 48s linear infinite,
+    driftLeft 180s linear infinite;        /* Very slow, majestic orbit feel */
+}
+
+@keyframes cycleEarth {
+  0%    { opacity: 0; }
+  5%    { opacity: 0.88; }
+  29%   { opacity: 0.88; }
+  37%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* ====================== NEBULA - Gentle Upward Flow ====================== */
+.bg-nebula {
+  background-image: url('assets/png/nebula.png');
+  background-size: 145% 145%;
+  animation: 
+    cycleNebula 48s linear infinite,
+    driftUp 110s linear infinite;         /* Calm, luxurious upward movement */
+}
+
+@keyframes cycleNebula {
+  0%    { opacity: 0; }
+  29%   { opacity: 0; }
+  35%   { opacity: 0.68; }
+  62%   { opacity: 0.68; }
+  71%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* ====================== STARS - Slow Cinematic Zoom ====================== */
+.bg-stars {
+  background-image: url('assets/png/stars.png');
+  animation: 
+    cycleStars 48s linear infinite,
+    zoomIn 75s linear infinite;           /* Slow, dreamy zoom */
+}
+
+@keyframes cycleStars {
+  0%    { opacity: 0; }
+  62%   { opacity: 0; }
+  68%   { opacity: 0.85; }
+  88%   { opacity: 0.85; }
+  96%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* ====================== MOVEMENT ANIMATIONS ====================== */
+@keyframes driftLeft {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes driftUp {
+  0%   { background-position: 50% 115%; }
+  100% { background-position: 50% -15%; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.32); }       /* Subtle, elegant zoom */
+}
+
     :root{
       --font-headline: "Science Gothic", sans-serif;
       --font-body: "Montserrat", sans-serif;
@@ -59,12 +151,18 @@
     radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
     radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
     radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55)), /* ← slightly lighter overlay */
-    url("assets/png/bg.png");   /* ← FIXED: removed the leading / */
+    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55)), 
+    /* url("assets/png/earth-horizon.png"); */
+    /* url("assets/png/bg.png");    */
+    /* background-image:  */
+    /* url("assets/png/stars.png"); */
+    /* url("assets/png/nebula.png"), */
+/*     
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
-}
+  background-repeat:no-repeat; */
+    }
+
 
     /* Animated star layers */
     .stars, .stars2, .stars3{
@@ -306,6 +404,11 @@
 </head>
 
 <body>
+  <div class="space-bg">
+  <!-- Layers in order: Earth (bottom) → Nebula → Stars (top) -->
+  <div class="bg-earth"></div>
+  <div class="bg-nebula"></div>
+  <div class="bg-stars"></div>
   <main class="hero">
     <div class="stars" aria-hidden="true"></div>
     <div class="stars2" aria-hidden="true"></div>
@@ -313,11 +416,11 @@
     <div class="glow" aria-hidden="true"></div>
 
     <section class="card" role="region" aria-label="Launch signup">
-      <div class="brandline">
+      <!-- <div class="brandline">
         <span class="dot"></span>
         <span>Mission Brief</span>
         <span class="dot"></span>
-      </div>
+      </div> -->
 
       <h1>MARS VENTURES</h1>
       <p class="subtitle">
@@ -357,6 +460,7 @@
       <div class="footer">© <span id="year"></span> MARS VENTURES by <a href="https://roycemars.com">ROYCE MARS</a> • All rights reserved</div>
     </section>
   </main>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();

@@ -1,0 +1,53 @@
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.space-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  overflow: hidden;           /* Important */
+}
+
+/* ====================== STARS - Zoom In ====================== */
+.stars {
+  position: absolute;
+  inset: 0;
+  background: url('assets/png/stars.png') center/cover no-repeat;
+  animation: zoomIn 35s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to   { transform: scale(1.35); }   /* adjust intensity */
+}
+
+/* ====================== NEBULA - Drift Up ====================== */
+.nebula {
+  position: absolute;
+  inset: 0;
+  background: url('assets/png/nebula.png') center/cover no-repeat;
+  animation: driftUp 80s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes driftUp {
+  0%   { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
+}
+
+/* ====================== EARTH - Drift Left (Right → Left) ====================== */
+.earth {
+  position: absolute;
+  inset: 0;
+  background: url('assets/png/earth-horizon.png') center/cover no-repeat;
+  animation: driftLeft 120s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes driftLeft {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
