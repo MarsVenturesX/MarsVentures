@@ -112,6 +112,34 @@
   to   { transform: scale(1.32); }       /* Subtle, elegant zoom */
 }
 
+/* ====================== MOBILE RESPONSIVE BACKGROUND FIX ====================== */
+@media (max-width: 768px) {
+  .bg-earth,
+  .bg-nebula,
+  .bg-stars {
+    background-size: cover !important;     /* This preserves original image proportions */
+  }
+
+  /* Slightly faster but still luxurious drift on mobile (movement remains visible) */
+  .bg-earth {
+    animation: 
+      cycleEarth 48s linear infinite,
+      driftLeft 130s linear infinite;
+  }
+
+  .bg-nebula {
+    animation: 
+      cycleNebula 48s linear infinite,
+      driftUp 75s linear infinite;
+  }
+
+  .bg-stars {
+    animation: 
+      cycleStars 48s linear infinite,
+      zoomIn 55s linear infinite;
+  }
+}
+
     :root{
       --font-headline: "Science Gothic", sans-serif;
       --font-body: "Montserrat", sans-serif;
@@ -152,15 +180,6 @@
     radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
     radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
     linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55)), 
-    /* url("assets/png/earth-horizon.png"); */
-    /* url("assets/png/bg.png");    */
-    /* background-image:  */
-    /* url("assets/png/stars.png"); */
-    /* url("assets/png/nebula.png"), */
-/*     
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat; */
     }
 
 
