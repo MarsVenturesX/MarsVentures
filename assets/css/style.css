@@ -16,115 +16,14 @@ body {
 /* Base styles */
 .bg-earth,
 .bg-nebula,
-.bg-stars {
+.bg-stars,
+.bg-mars-league,
+.bg-mars-horizon {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-}
-
-/* ====================== EARTH - Slow Elegant Drift ====================== */
-.bg-earth {
-  background-image: url('../png/earth-horizon.png');
-  background-size: cover;
-  animation:
-    cycleEarth 48s linear infinite,
-    driftLeft 180s linear infinite;
-  /* Very slow, majestic orbit feel */
-}
-
-@keyframes cycleEarth {
-  0% {
-    opacity: 0;
-  }
-
-  5% {
-    opacity: 0.88;
-  }
-
-  29% {
-    opacity: 0.88;
-  }
-
-  37% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-/* ====================== NEBULA - Gentle Upward Flow ====================== */
-.bg-nebula {
-  background-image: url('../png/nebula.png');
-  background-size: cover;
-  animation:
-    cycleNebula 48s linear infinite,
-    driftUp 110s linear infinite;
-  /* Calm, luxurious upward movement */
-}
-
-@keyframes cycleNebula {
-  0% {
-    opacity: 0;
-  }
-
-  29% {
-    opacity: 0;
-  }
-
-  35% {
-    opacity: 0.68;
-  }
-
-  62% {
-    opacity: 0.68;
-  }
-
-  71% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-/* ====================== STARS - Slow Cinematic Zoom ====================== */
-.bg-stars {
-  background-image: url('../png/stars.png');
-  animation:
-    cycleStars 48s linear infinite,
-    zoomIn 75s linear infinite;
-  /* Slow, dreamy zoom */
-}
-
-@keyframes cycleStars {
-  0% {
-    opacity: 0;
-  }
-
-  62% {
-    opacity: 0;
-  }
-
-  68% {
-    opacity: 0.85;
-  }
-
-  88% {
-    opacity: 0.85;
-  }
-
-  96% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 /* ====================== MOVEMENT ANIMATIONS ====================== */
@@ -238,11 +137,11 @@ body {
   align-items: center;
   justify-content: center;
   padding: 100px 18px 60px;
-  background: 
-    radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
-    radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
-    radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55));
+  background:
+    radial-gradient(1200px 700px at 15% 15%, rgba(255, 255, 255, .08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 5%, rgba(255, 255, 255, .06), transparent 65%),
+    radial-gradient(800px 500px at 80% 75%, rgba(140, 180, 255, .10), transparent 62%),
+    linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .55));
   overflow: hidden;
 }
 
@@ -252,11 +151,11 @@ body {
   min-height: 100vh;
   display: block;
   padding: 130px 18px 100px;
-  background: 
-    radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
-    radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
-    radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55));
+  background:
+    radial-gradient(1200px 700px at 15% 15%, rgba(255, 255, 255, .08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 5%, rgba(255, 255, 255, .06), transparent 65%),
+    radial-gradient(800px 500px at 80% 75%, rgba(140, 180, 255, .10), transparent 62%),
+    linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .55));
 }
 
 
@@ -369,14 +268,16 @@ h1 {
   font-weight: 300;
   font-size: clamp(42px, 5.8vw, 72px);
   line-height: 1.05;
-  letter-spacing: 0.085em;             /* Wide, premium spacing */
+  letter-spacing: 0.085em;
+  /* Wide, premium spacing */
   text-transform: uppercase;
   margin: 0 0 14px;
-  text-shadow: 0 0 20px rgba(255,255,255,.15);
+  text-shadow: 0 0 20px rgba(255, 255, 255, .15);
 }
 
 /* H2 / H3 – Still light and refined */
-h2, h3 {
+h2,
+h3 {
   font-weight: 300;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -587,7 +488,7 @@ button:active {
   font-weight: 300;
   letter-spacing: 0.08em;
   color: white;
-  
+
 
   display: flex;
   align-items: center;
@@ -606,13 +507,15 @@ button:active {
   width: auto;
   max-height: 48px;
   display: block;
-  object-fit: contain;             /* Keeps proportions perfect */
+  object-fit: contain;
+  /* Keeps proportions perfect */
 }
 
 .logo-text {
   font-family: var(--font-headline);
   font-size: 26px;
-  font-weight: 300;       /* Light & premium */
+  font-weight: 300;
+  /* Light & premium */
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -672,14 +575,17 @@ button:active {
 }
 
 /* ====================== PREVENT OVERSROLL & NAKED BACKGROUND ====================== */
-html, body {
-  overscroll-behavior-y: contain;   /* Stops extra scrolling at top/bottom */
+html,
+body {
+  overscroll-behavior-y: contain;
+  /* Stops extra scrolling at top/bottom */
   overscroll-behavior-x: none;
 }
 
 /* Make sure the dark overlay stays fixed */
 .hero--page {
-  background: none;                 /* Remove the moving overlay from hero */
+  background: none;
+  /* Remove the moving overlay from hero */
 }
 
 /* ====================== PREMIUM FORM INPUTS (Unified Style) ====================== */
@@ -688,8 +594,8 @@ html, body {
   width: 100%;
   padding: 20px 24px;
   font-size: 17px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius);
   color: var(--text);
   font-family: var(--font-body);
@@ -698,20 +604,116 @@ html, body {
 }
 
 .premium-form .input textarea {
-  min-height: 260px;     /* Big, spacious textarea */
+  min-height: 260px;
+  /* Big, spacious textarea */
 }
 
 .premium-form .input input:focus,
 .premium-form .input textarea:focus {
   outline: none;
   border-color: #a0b8ff;
-  background: rgba(255,255,255,0.12);
-  box-shadow: 0 0 0 4px rgba(160,184,255,0.15);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 4px rgba(160, 184, 255, 0.15);
   transform: translateY(-1px);
 }
 
 /* Placeholder styling */
 .premium-form .input input::placeholder,
 .premium-form .input textarea::placeholder {
-  color: rgba(255,255,255,.45);
+  color: rgba(255, 255, 255, .45);
+}
+
+/* ====================== SELECTED LAYERS - FASTER SEQUENTIAL TIMING (90s cycle) ====================== */
+
+.bg-earth,
+.bg-mars-league,
+.bg-stars,
+.bg-mars-horizon,
+.bg-nebula {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+}
+
+/* 1. Earth */
+.bg-earth {
+  background-image: url('../png/earth-horizon.png');
+  animation: cycle1 90s linear infinite,
+             driftLeft 180s linear infinite;
+}
+
+/* 2. Mars League - FASTER upward movement */
+.bg-mars-league {
+  background-image: url('../png/mars-league.png');
+  animation: cycle2 90s linear infinite,
+             driftUp 65s linear infinite;     /* Faster upward drift */
+}
+
+/* 3. Stars */
+.bg-stars {
+  background-image: url('../png/stars.png');
+  animation: cycle3 90s linear infinite,
+             zoomIn 75s linear infinite;
+}
+
+/* 4. Mars Horizon */
+.bg-mars-horizon {
+  background-image: url('../png/mars-horizon.png');
+  animation: cycle4 90s linear infinite,
+             driftLeft 165s linear infinite;
+}
+
+/* 5. Nebula */
+.bg-nebula {
+  background-image: url('../png/nebula.png');
+  animation: cycle5 90s linear infinite,
+             driftUp 110s linear infinite;
+}
+
+/* ====================== SEQUENTIAL CYCLE KEYFRAMES (90s total - Premium Pace) ====================== */
+
+@keyframes cycle1 {   /* Earth */
+  0%    { opacity: 0; }
+  4%    { opacity: 0.88; }
+  18%   { opacity: 0.88; }
+  23%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cycle2 {   /* Mars League */
+  0%    { opacity: 0; }
+  20%   { opacity: 0; }
+  24%   { opacity: 0.78; }
+  38%   { opacity: 0.78; }
+  43%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cycle3 {   /* Stars */
+  0%    { opacity: 0; }
+  38%   { opacity: 0; }
+  42%   { opacity: 0.85; }
+  56%   { opacity: 0.85; }
+  61%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cycle4 {   /* Mars Horizon */
+  0%    { opacity: 0; }
+  56%   { opacity: 0; }
+  60%   { opacity: 0.80; }
+  74%   { opacity: 0.80; }
+  79%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cycle5 {   /* Nebula */
+  0%    { opacity: 0; }
+  74%   { opacity: 0; }
+  78%   { opacity: 0.68; }
+  88%   { opacity: 0.68; }
+  93%   { opacity: 0; }
+  100%  { opacity: 0; }
 }
