@@ -865,3 +865,64 @@ body {
     text-align: center;
   }
 }
+
+/* ====================== MOBILE NAV FIX - Button + Hamburger Spacing ====================== */
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 16px 20px !important;           /* More breathing room */
+    gap: 12px;
+  }
+
+  /* Make "Book a Call" button much smaller on mobile */
+  .cta-button {
+    padding: 9px 16px !important;
+    font-size: 13px !important;
+    min-width: auto !important;
+    white-space: nowrap;
+  }
+
+  /* Hamburger icon gets its own clean space */
+  .main-nav::after {
+    right: 20px !important;
+    font-size: 30px;
+  }
+
+  /* Optional: hide full button text on very small screens */
+  @media (max-width: 480px) {
+    .cta-button {
+      padding: 8px 12px !important;
+      font-size: 12px !important;
+    }
+  }
+}
+
+/* ====================== FINAL MOBILE NAV FIX - Button + Hamburger ====================== */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 16px 20px !important;
+    position: relative;
+  }
+
+  /* Push button left and give it space */
+  .cta-button {
+    margin-left: auto !important;
+    margin-right: 62px !important;     /* Space for hamburger */
+    padding: 9px 18px !important;
+    font-size: 13px !important;
+    border-radius: 9999px;
+  }
+
+  /* Hamburger icon - strong right positioning */
+  .main-nav::after {
+    content: "☰";
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    cursor: pointer;
+  }
+}
