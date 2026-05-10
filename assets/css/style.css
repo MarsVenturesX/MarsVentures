@@ -670,3 +670,14 @@ button:active {
   transform: translateY(-8px);
   border-color: rgba(160, 184, 255, 0.4);
 }
+
+/* ====================== PREVENT OVERSROLL & NAKED BACKGROUND ====================== */
+html, body {
+  overscroll-behavior-y: contain;   /* Stops extra scrolling at top/bottom */
+  overscroll-behavior-x: none;
+}
+
+/* Make sure the dark overlay stays fixed */
+.hero--page {
+  background: none;                 /* Remove the moving overlay from hero */
+}
