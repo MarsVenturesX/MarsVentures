@@ -725,3 +725,44 @@ body {
     cycle2 90s linear infinite,
     driftDown 55s linear infinite !important;     /* Faster and stronger upward drift */
 }
+
+/* ====================== MOBILE RESPONSIVE FIXES ====================== */
+
+/* Make form stack nicely on mobile */
+@media (max-width: 768px) {
+  .premium-form {
+    display: block !important;           /* Override grid on mobile */
+  }
+
+  .premium-form > div[style*="grid-template-columns"] {
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  .premium-form .input {
+    margin-bottom: 24px;
+  }
+
+  .premium-form textarea {
+    min-height: 220px;
+  }
+
+  .premium-form button {
+    margin-top: 30px;
+  }
+
+  /* Contact info section */
+  .hero--page .card > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 480px) {
+  .premium-form input,
+  .premium-form textarea {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+}
