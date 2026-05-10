@@ -19,407 +19,6 @@
    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/cursor.css">
    <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-    body {
-  background-color: #000;
-  overflow-x: hidden;
-}
-
-/* ====================== PREMIUM INFINITE CYCLING SPACE BACKGROUND ====================== */
-.space-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  background: #000;
-}
-
-/* Base styles */
-.bg-earth, .bg-nebula, .bg-stars {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-}
-
-/* ====================== EARTH - Slow Elegant Drift ====================== */
-.bg-earth {
-  background-image: url('assets/png/earth-horizon.png');
-  background-size: 155% 155%;
-  animation: 
-    cycleEarth 48s linear infinite,
-    driftLeft 180s linear infinite;        /* Very slow, majestic orbit feel */
-}
-
-@keyframes cycleEarth {
-  0%    { opacity: 0; }
-  5%    { opacity: 0.88; }
-  29%   { opacity: 0.88; }
-  37%   { opacity: 0; }
-  100%  { opacity: 0; }
-}
-
-/* ====================== NEBULA - Gentle Upward Flow ====================== */
-.bg-nebula {
-  background-image: url('assets/png/nebula.png');
-  background-size: 145% 145%;
-  animation: 
-    cycleNebula 48s linear infinite,
-    driftUp 110s linear infinite;         /* Calm, luxurious upward movement */
-}
-
-@keyframes cycleNebula {
-  0%    { opacity: 0; }
-  29%   { opacity: 0; }
-  35%   { opacity: 0.68; }
-  62%   { opacity: 0.68; }
-  71%   { opacity: 0; }
-  100%  { opacity: 0; }
-}
-
-/* ====================== STARS - Slow Cinematic Zoom ====================== */
-.bg-stars {
-  background-image: url('assets/png/stars.png');
-  animation: 
-    cycleStars 48s linear infinite,
-    zoomIn 75s linear infinite;           /* Slow, dreamy zoom */
-}
-
-@keyframes cycleStars {
-  0%    { opacity: 0; }
-  62%   { opacity: 0; }
-  68%   { opacity: 0.85; }
-  88%   { opacity: 0.85; }
-  96%   { opacity: 0; }
-  100%  { opacity: 0; }
-}
-
-/* ====================== MOVEMENT ANIMATIONS ====================== */
-@keyframes driftLeft {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-@keyframes driftUp {
-  0%   { background-position: 50% 115%; }
-  100% { background-position: 50% -15%; }
-}
-
-@keyframes zoomIn {
-  from { transform: scale(1.0); }
-  to   { transform: scale(1.32); }       /* Subtle, elegant zoom */
-}
-
-/* ====================== MOBILE RESPONSIVE BACKGROUND FIX ====================== */
-@media (max-width: 768px) {
-  .bg-earth,
-  .bg-nebula,
-  .bg-stars {
-    background-size: cover !important;     /* This preserves original image proportions */
-  }
-
-  /* Slightly faster but still luxurious drift on mobile (movement remains visible) */
-  .bg-earth {
-    animation: 
-      cycleEarth 48s linear infinite,
-      driftLeft 130s linear infinite;
-  }
-
-  .bg-nebula {
-    animation: 
-      cycleNebula 48s linear infinite,
-      driftUp 75s linear infinite;
-  }
-
-  .bg-stars {
-    animation: 
-      cycleStars 48s linear infinite,
-      zoomIn 55s linear infinite;
-  }
-}
-
-    :root{
-      --font-headline: "Science Gothic", sans-serif;
-      --font-body: "Montserrat", sans-serif;
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --line: rgba(255,255,255,.22);
-      --glass: rgba(255,255,255,.06);
-      --glass2: rgba(0,0,0,.28);
-      --shadow: 0 22px 70px rgba(0,0,0,.55);
-      --radius: 14px;
-    }
-
-    body{
-      font-family: var(--font-body);
-    }
-    h1,h2,h3,.brandline{
-      font-family: var(--font-headline);
-    }
-
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      color:var(--text);
-      background:#05070c;
-      overflow:hidden;
-    }
-
-    /* Hero background (image optional) */
-    .hero{
-  position:relative;
-  min-height:100vh;
-  display:grid;
-  place-items:center;
-  padding:56px 18px;
-  background:
-    radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
-    radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
-    radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55)), 
-    }
-
-
-    /* Animated star layers */
-    .stars, .stars2, .stars3{
-      position:absolute;
-      inset:-30%;
-      background-repeat:repeat;
-      pointer-events:none;
-      opacity:.6;
-      animation: drift 80s linear infinite;
-      transform: translateZ(0);
-      mix-blend-mode: screen;
-    }
-
-    .stars{
-      background-image:
-        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,.85) 50%, transparent 52%),
-        radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,.65) 50%, transparent 52%),
-        radial-gradient(1px 1px at 55% 35%, rgba(255,255,255,.75) 50%, transparent 52%),
-        radial-gradient(1px 1px at 75% 80%, rgba(255,255,255,.70) 50%, transparent 52%),
-        radial-gradient(1px 1px at 90% 30%, rgba(255,255,255,.55) 50%, transparent 52%);
-      background-size:260px 260px;
-      filter: blur(.15px);
-    }
-
-    .stars2{
-      opacity:.35;
-      animation-duration:130s;
-      background-image:
-        radial-gradient(1px 1px at 20% 10%, rgba(255,255,255,.55) 50%, transparent 52%),
-        radial-gradient(1px 1px at 45% 60%, rgba(255,255,255,.45) 50%, transparent 52%),
-        radial-gradient(1px 1px at 65% 25%, rgba(255,255,255,.50) 50%, transparent 52%),
-        radial-gradient(1px 1px at 85% 55%, rgba(255,255,255,.40) 50%, transparent 52%);
-      background-size:420px 420px;
-      filter: blur(.25px);
-    }
-
-    .stars3{
-      opacity:.20;
-      animation-duration:180s;
-      background-image:
-        radial-gradient(1px 1px at 12% 72%, rgba(255,255,255,.40) 50%, transparent 52%),
-        radial-gradient(1px 1px at 52% 12%, rgba(255,255,255,.35) 50%, transparent 52%),
-        radial-gradient(1px 1px at 92% 88%, rgba(255,255,255,.30) 50%, transparent 52%);
-      background-size:600px 600px;
-      filter: blur(.35px);
-    }
-
-    @keyframes drift{
-      from{ transform: translate3d(0,0,0); }
-      to{ transform: translate3d(180px, 140px, 0); }
-    }
-
-    /* Card */
-    .card{
-      position:relative;
-      width:min(980px,100%);
-      padding:38px 26px 26px;
-      border-radius:22px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.26));
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      text-align:center;
-
-      /* Apple-style reveal */
-      opacity:0;
-      transform: translateY(10px);
-      animation: reveal .9s ease-out forwards;
-    }
-    @keyframes reveal{
-      to{ opacity:1; transform: translateY(0); }
-    }
-
-    .brandline{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      margin-bottom:16px;
-      opacity:.9;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-weight:600;
-      font-size:12px;
-    }
-    .brandline .dot{
-      width:6px; height:6px;
-      border-radius:999px;
-      background: rgba(255,255,255,.55);
-      box-shadow: 0 0 16px rgba(255,255,255,.35);
-    }
-
-    h1{
-      font-family: var(--font-headline);
-      margin:0 0 10px;
-      font-size: clamp(30px, 3.4vw, 54px);
-      font-weight:400;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      text-shadow:
-        0 0 14px rgba(255,255,255,.25),
-        0 0 40px rgba(120,160,255,.16);
-    }
-
-    .subtitle{
-      font-family: var(--body-font);
-      margin: 0 auto 26px;
-      max-width: 56ch;
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      letter-spacing:.02em;
-      font-size: clamp(14px, 1.2vw, 16px);
-      line-height:1.6;
-    }
-
-    /* Form */
-    .form{
-      width:min(760px,100%);
-      margin: 0 auto;
-      display:grid;
-      grid-template-columns: 1fr auto;
-      gap:12px;
-      align-items:center;
-    }
-
-    .input{
-      font-family: var(--body-font);
-      position:relative;
-    }
-
-    input[type="email"]{
-      width:100%;
-      padding:14px 14px 14px 14px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      outline:none;
-      font-size:14px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
-    }
-    input::placeholder{ color: rgba(255,255,255,.45); }
-    input:focus{
-      border-color: rgba(255,255,255,.38);
-      background: rgba(255,255,255,.08);
-      box-shadow: 0 0 0 6px rgba(120,160,255,.10);
-    }
-
-    button{
-      padding:14px 20px;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.24);
-      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
-      color: var(--text);
-      cursor:pointer;
-      font-weight:800;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      transition: transform .08s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
-      min-width: 148px;
-    }
-    button:hover{
-      border-color: rgba(255,255,255,.38);
-      box-shadow: 0 16px 40px rgba(0,0,0,.35), 0 0 30px rgba(120,160,255,.14);
-      transform: translateY(-1px);
-    }
-    button:active{ transform: translateY(0px); }
-
-    .fineprint{
-      font-family: var(--body-font);
-      margin-top:10px;
-      color: rgba(255,255,255,.55);
-      font-size: 12px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    }
-
-    /* Social */
-    .social{
-      margin-top:20px;
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.20);
-      text-decoration:none;
-      color: rgba(255,255,255,.85);
-      font-size: 12px;
-      letter-spacing:.10em;
-      text-transform:uppercase;
-      transition: background .2s ease, border-color .2s ease, transform .08s ease;
-    }
-    .chip:hover{
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.24);
-      transform: translateY(-1px);
-    }
-    .chip svg{ width:16px; height:16px; fill: rgba(255,255,255,.82); }
-
-    /* Footer micro */
-    .footer{
-      margin-top:18px;
-      opacity:.55;
-      font-size: 11px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      font-family: var(--body-font);
-    }
-    .footer a{
-      color: inherit;
-      text-decoration: none;
-    }
-    .footer a:hover{
-      text-decoration: underline;
-    }
-
-    /* Mobile */
-    @media (max-width: 620px){
-      .form{ grid-template-columns: 1fr; }
-      button{ width:100%; min-width:auto; }
-      h1{ letter-spacing:.16em; }
-      .card{ padding:30px 18px 20px; }
-    }
-
-    /* Reduce motion accessibility */
-    @media (prefers-reduced-motion: reduce){
-      .stars, .stars2, .stars3, .glow{ animation:none !important; }
-      .card{ animation:none !important; opacity:1; transform:none; }
-    }
-  </style>
 </head>
 
 <body>
@@ -428,38 +27,51 @@
   <div class="bg-earth"></div>
   <div class="bg-nebula"></div>
   <div class="bg-stars"></div>
-  <main class="hero">
+  </div>
+
+<main class="hero" style="min-height: unset;">
     <div class="stars" aria-hidden="true"></div>
     <div class="stars2" aria-hidden="true"></div>
     <div class="stars3" aria-hidden="true"></div>
     <div class="glow" aria-hidden="true"></div>
 
-    <section class="card" role="region" aria-label="Launch signup">
-      <!-- <div class="brandline">
-        <span class="dot"></span>
-        <span>Mission Brief</span>
-        <span class="dot"></span>
-      </div> -->
+    <!-- ==================== MAIN NAV ==================== -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">MARS VENTURES</a>
 
-      <h1>MARS VENTURES</h1>
-      <p class="subtitle">
-        Designing, building, and scaling the next generation of future tech.
-       Join the early list for launch access, startup insights, and private updates.
-      </p>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-      <!-- FORM: replace action with your Formspree endpoint -->
-      <form class="form" action="https://formspree.io/f/xpqyazlg" method="POST" id="signupForm">
-        <div class="input">
-          <input type="email" name="email" placeholder="Email address" required autocomplete="email" />
-        </div>
-        <button type="submit">Join List</button>
-      </form>
+    <a href="contact.html" class="cta-button">Book a Call</a>
+  </div>
+</nav>
 
-      <div class="fineprint" id="msg" aria-live="polite">
-        One-click unsubscribe. Launch updates only.
-      </div>
+<section class="card" style="max-width: 1100px;">
+    <h1 style="font-size: clamp(42px, 5vw, 68px); line-height: 1.1;">
+      Mars Ventures
+    </h1>
+    <p style="font-size: 22px; max-width: 680px; margin: 16px auto 32px;">
+      Fractional CTO • AI • Mobile • Cloud Architecture • Global Scale
+    </p>
+    <p class="subtitle" style="font-size: 18px; max-width: 620px;">
+      From MVP to billion-dollar scale. We architect, build, fund, and scale the future generation of tech companies on a global scale.
+    </p>
 
-      <nav class="social" aria-label="Social links">
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="contact.html" class="cta-button" style="font-size:18px; padding:18px 36px;">
+        Book a Call
+      </a>
+      <a href="services.html" style="color:white; border:1px solid rgba(255,255,255,.4); padding:18px 32px; border-radius:9999px; text-decoration:none; font-weight:600;">
+        Explore Services
+      </a>
+    </div>
+
+    <nav class="social" aria-label="Social links">
         <a class="chip" href="https://x.com/MarsVenturesX" aria-label="X.com">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-7.3L4.6 22H1.5l7.3-8.4L1 2h6.9l4.7 6.6L18.9 2zm-1.2 18h1.8L6.9 3.8H5L17.7 20z"/></svg>
           <span>X</span>
@@ -476,10 +88,10 @@
         </a>
       </nav>
 
-      <div class="footer">© <span id="year"></span> MARS VENTURES by <a href="https://roycemars.com">ROYCE MARS</a> • All rights reserved</div>
-    </section>
+      <div class="footer">© <span id="year"></span> Mars Ventures by <a href="https://roycemars.com">Royce Mars</a> • All rights reserved</div>
+  </section>
   </main>
-  </div>
+  <!-- </div> -->
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
