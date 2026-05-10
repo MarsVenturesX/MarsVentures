@@ -681,3 +681,37 @@ html, body {
 .hero--page {
   background: none;                 /* Remove the moving overlay from hero */
 }
+
+/* ====================== PREMIUM FORM INPUTS (Unified Style) ====================== */
+.premium-form .input input,
+.premium-form .input textarea {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 17px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: all 0.4s ease;
+  resize: vertical;
+}
+
+.premium-form .input textarea {
+  min-height: 260px;     /* Big, spacious textarea */
+}
+
+.premium-form .input input:focus,
+.premium-form .input textarea:focus {
+  outline: none;
+  border-color: #a0b8ff;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 0 4px rgba(160,184,255,0.15);
+  transform: translateY(-1px);
+}
+
+/* Placeholder styling */
+.premium-form .input input::placeholder,
+.premium-form .input textarea::placeholder {
+  color: rgba(255,255,255,.45);
+}

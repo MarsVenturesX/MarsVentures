@@ -1,25 +1,147 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Copy the exact same <head> from index.html (including the style.css link) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact • Mars Ventures</title>
+  <meta name="description" content="Get in touch with Mars Ventures — Fractional CTO, Mobile & Cloud Architecture, Venture Studio." />
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Mars" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/cursor.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <!-- 1. Paste the full .space-bg div (with bg-earth, bg-nebula, bg-stars) -->
+  <!-- Animated Space Background -->
   <div class="space-bg">
     <div class="bg-earth"></div>
     <div class="bg-nebula"></div>
     <div class="bg-stars"></div>
-
-    <!-- 2. Paste the main-nav here -->
-    <nav class="main-nav"> ... </nav>
-
-    <!-- 3. Your page content here -->
-    <main class="hero" style="padding-top: 110px;">
-      <!-- content -->
-    </main>
   </div>
 
-  <!-- scripts at the bottom -->
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/png/logo.png" alt="Mars Ventures" class="logo-img" />
+        <span class="logo-text">Mars Ventures</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Royce</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="cta-button">Book a Call</a>
+    </div>
+  </nav>
+
+  <main class="hero hero--page">
+    <!-- Twinkling stars overlay -->
+    <div class="stars" aria-hidden="true"></div>
+    <div class="stars2" aria-hidden="true"></div>
+    <div class="stars3" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+
+    <section class="card" style="max-width: 1100px; margin: 0 auto;">
+      <h1 style="font-size: clamp(42px, 5.5vw, 68px); line-height: 1.1;">
+        Let's Build the Future Together
+      </h1>
+      <p style="font-size: 22px; max-width: 720px; margin: 16px auto 60px; color: var(--muted);">
+        Ready to launch your next venture? 
+        <br/>
+        We respond to serious inquiries within 24 hours.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+        
+                <!-- Contact Form -->
+<div>
+  <form action="https://formspree.io/f/xpqyazlg" method="POST" class="form premium-form"
+        style="display: grid; 
+               grid-template-columns: 1fr 1fr; 
+               gap: 24px;">
+
+    <!-- Row 1: Name + Email side by side -->
+    <div class="input">
+      <input type="text" name="name" placeholder="Your name" required>
+    </div>
+    <div class="input">
+      <input type="email" name="email" placeholder="Email address" required>
+    </div>
+
+    <!-- Row 2: Big textarea (full width) -->
+    <div class="input" style="grid-column: 1 / -1;">
+      <textarea name="message" rows="14" placeholder="Tell us about your venture idea..." required></textarea>
+    </div>
+
+    <!-- Row 3: Submit button (full width) -->
+    <button type="submit" 
+            style="grid-column: 1 / -1; 
+                   width: 100%; 
+                   margin-top: 20px; 
+                   padding: 20px 40px; 
+                   font-size: 17px;">
+      Send Message
+    </button>
+  </form>
+</div>
+
+                <!-- Contact Info - Centered Column -->
+        <div style="text-align: center;">
+          
+          <h3 style="margin-bottom: 32px; font-size: 1.4rem; letter-spacing: 0.08em;">
+            DIRECT CONTACT
+          </h3>
+
+          <p style="margin-bottom: 28px;">
+            <strong style="display: block; margin-bottom: 6px; font-size: 15px; opacity: 0.7;">Phone:</strong>
+            <a href="tel:+12027179444" style="color:#a0b8ff; text-decoration:none; font-size: 22px;">
+              +1 (202) 717-9444
+            </a>
+          </p>
+
+          <p style="margin-bottom: 50px;">
+            <strong style="display: block; margin-bottom: 6px; font-size: 15px; opacity: 0.7;">Email:</strong>
+            <a href="mailto:info@marsventures.io" style="color:#a0b8ff; text-decoration:none; font-size: 22px;">
+              info@marsventures.io
+            </a>
+          </p>
+
+          <h3 style="margin-bottom: 24px; font-size: 1.4rem; letter-spacing: 0.08em;">
+            FOLLOW THE MISSION
+          </h3>
+
+          <div class="social" style="justify-content: center; gap: 16px;">
+            <a class="chip" href="https://x.com/marsventuresx" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-7.3L4.6 22H1.5l7.3-8.4L1 2h6.9l4.7 6.6L18.9 2zm-1.2 18h1.8L6.9 3.8H5L17.7 20z"/></svg>
+              <span>X</span>
+            </a>
+            <a class="chip" href="https://www.linkedin.com/company/marsventuresx/" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.8 3.4-1.8 3.6 0 4.2 2.3 4.2 5.4v6.2zM5.3 7.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM7.1 20.4H3.5V9h3.6v11.4z"/></svg>
+              <span>LINKEDIN</span>
+            </a>
+            <a class="chip" href="https://www.youtube.com/@MarsVenturesX" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C15.8 3.8 12 3.8 12 3.8h0s-3.8 0-6.7.2c-.4.1-1.3.1-2.1.9-.6.7-.8 2.3-.8 2.3S2 9 2 10.8v2.3c0 1.8.4 3.6.4 3.6s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.7.2 6.4.2 6.4.2s3.8 0 6.7-.2c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.4-1.8.4-3.6v-2.3c0-1.8-.4-3.6-.4-3.6zM10 15.5V8.8l6.2 3.4L10 15.5z"/></svg>
+              <span>YOUTUBE</span>
+            </a>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <script src="assets/js/cursor.js" defer></script>
 </body>
 </html>
