@@ -926,3 +926,24 @@ body {
     cursor: pointer;
   }
 }
+
+/* ====================== MOBILE: Keep "Book a Call" button full size ====================== */
+@media (max-width: 768px) {
+
+  /* 1. Keep button large and premium (same size as desktop) */
+  .cta-button {
+    padding: 12px 28px !important;     /* Keep original padding */
+    font-size: 14px !important;        /* Only slightly smaller text */
+    min-width: auto !important;
+  }
+
+  /* 2. Only downscale the logo text (as requested) */
+  .logo-text {
+    font-size: 21px !important;        /* Smaller on mobile, but still elegant */
+  }
+
+  /* Optional: make logo image slightly smaller too */
+  .logo img {
+    max-height: 42px !important;
+  }
+}
