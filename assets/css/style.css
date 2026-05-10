@@ -1,6 +1,7 @@
 body {
-  background-color: #000;
-  overflow-x: hidden;
+  margin: 0;
+  color: var(--text);
+  background: #05070c;
 }
 
 /* ====================== PREMIUM INFINITE CYCLING SPACE BACKGROUND ====================== */
@@ -225,28 +226,37 @@ body {
   margin: 0;
   color: var(--text);
   background: #05070c;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ====================== HERO - HOME / LANDING PAGE (Perfectly Centered) ====================== */
+.hero--home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 18px 60px;
+  background: 
+    radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
+    radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
+    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55));
   overflow: hidden;
 }
 
-/* Hero background (image optional) */
-.hero {
+/* ====================== HERO - SCROLLABLE PAGES ====================== */
+.hero--page {
   position: relative;
-  height: 100vh;
-  /* Changed from min-height */
-  display: flex;
-  align-items: center;
-  /* Vertical centering */
-  justify-content: center;
-  /* Horizontal centering */
-  padding: 100px 18px 60px;
-  /* Clears fixed nav + breathing room */
-  background:
-    radial-gradient(1200px 700px at 15% 15%, rgba(255, 255, 255, .08), transparent 60%),
-    radial-gradient(1000px 600px at 85% 5%, rgba(255, 255, 255, .06), transparent 65%),
-    radial-gradient(800px 500px at 80% 75%, rgba(140, 180, 255, .10), transparent 62%),
-    linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .55));
-  overflow: hidden;
-  /* Prevents any scroll inside hero */
+  min-height: 100vh;
+  display: block;
+  padding: 130px 18px 100px;
+  background: 
+    radial-gradient(1200px 700px at 15% 15%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 5%, rgba(255,255,255,.06), transparent 65%),
+    radial-gradient(800px 500px at 80% 75%, rgba(140,180,255,.10), transparent 62%),
+    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.55));
 }
 
 
@@ -587,7 +597,7 @@ button:active {
   transition: transform 0.3s ease;
 }
 
-logo:hover {
+.logo:hover {
   transform: scale(1.05);
 }
 
