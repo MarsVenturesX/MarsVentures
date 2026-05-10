@@ -766,3 +766,37 @@ body {
     font-size: 16px;
   }
 }
+
+/* ====================== RESPONSIVE CONTACT FORM ====================== */
+/* Desktop: Keep old side-by-side layout */
+.premium-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Textarea and button always full width */
+.premium-form .input:last-of-type,
+.premium-form button {
+  grid-column: 1 / -1;
+}
+
+/* ====================== MOBILE: New stacked layout ====================== */
+@media (max-width: 768px) {
+  .premium-form {
+    display: block;           /* Switch to single column */
+    gap: 0;
+  }
+
+  .premium-form .input {
+    margin-bottom: 24px;
+  }
+
+  .premium-form textarea {
+    min-height: 240px;
+  }
+
+  .premium-form button {
+    margin-top: 20px;
+  }
+}

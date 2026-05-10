@@ -72,31 +72,25 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
 
                 <!-- Contact Form -->
+                <!-- Contact Form -->
                 <div>
-                    <form action="https://formspree.io/f/xpqyazlg" method="POST" class="form premium-form" style="display: grid; 
-               grid-template-columns: 1fr 1fr; 
-               gap: 24px;">
+                    <form action="https://formspree.io/f/xpqyazlg" method="POST" class="form premium-form">
 
-                        <!-- Row 1: Name + Email side by side -->
                         <div class="input">
                             <input type="text" name="name" placeholder="Your name" required>
                         </div>
+
                         <div class="input">
                             <input type="email" name="email" placeholder="Email address" required>
                         </div>
 
-                        <!-- Row 2: Big textarea (full width) -->
-                        <div class="input" style="grid-column: 1 / -1;">
-                            <textarea name="message" rows="14" placeholder="Tell us about your venture idea..."
+                        <div class="input">
+                            <textarea name="message" rows="12" placeholder="Tell us about your venture idea..."
                                 required></textarea>
                         </div>
 
-                        <!-- Row 3: Submit button (full width) -->
-                        <button type="submit" style="grid-column: 1 / -1; 
-                   width: 100%; 
-                   margin-top: 20px; 
-                   padding: 20px 40px; 
-                   font-size: 17px;">
+                        <button type="submit"
+                            style="width:100%; margin-top: 30px; padding: 20px 40px; font-size: 17px;">
                             Send Message
                         </button>
                     </form>
