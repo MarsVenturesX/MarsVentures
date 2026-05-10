@@ -119,6 +119,13 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Simple hamburger toggle
+  document.querySelector('.main-nav').addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' || window.innerWidth > 768) return;
+    this.classList.toggle('open');
+  });
+</script>
 
   <script src="assets/js/cursor.js" defer></script>
 </body>
