@@ -38,13 +38,13 @@ body {
 }
 
 @keyframes driftUp {
-  0% {
-    background-position: 50% 115%;
-  }
+  0%   { background-position: 50% 130%; }
+  100% { background-position: 50% -30%; }
+}
 
-  100% {
-    background-position: 50% -15%;
-  }
+@keyframes driftDown {
+  0%   { background-position: 50% -30%; }
+  100% { background-position: 50% 130%; }
 }
 
 @keyframes zoomIn {
@@ -641,7 +641,7 @@ body {
 .bg-earth {
   background-image: url('../png/earth-horizon.png');
   animation: cycle1 90s linear infinite,
-             driftLeft 180s linear infinite;
+             driftLeft 75s linear infinite;
 }
 
 /* 2. Mars League - FASTER upward movement */
@@ -655,21 +655,21 @@ body {
 .bg-stars {
   background-image: url('../png/stars.png');
   animation: cycle3 90s linear infinite,
-             zoomIn 75s linear infinite;
+             zoomIn 55s linear infinite;
 }
 
 /* 4. Mars Horizon */
 .bg-mars-horizon {
   background-image: url('../png/mars-horizon.png');
   animation: cycle4 90s linear infinite,
-             driftLeft 165s linear infinite;
+             driftLeft 90s linear infinite;
 }
 
 /* 5. Nebula */
 .bg-nebula {
   background-image: url('../png/nebula.png');
   animation: cycle5 90s linear infinite,
-             driftUp 110s linear infinite;
+             driftDown 65s linear infinite;
 }
 
 /* ====================== SEQUENTIAL CYCLE KEYFRAMES (90s total - Premium Pace) ====================== */
@@ -716,4 +716,12 @@ body {
   88%   { opacity: 0.68; }
   93%   { opacity: 0; }
   100%  { opacity: 0; }
+}
+
+/* ====================== FIX: MARS LEAGUE MOVEMENT ====================== */
+.bg-mars-league {
+  background-size: 160% 160% !important;        /* Much larger for visible movement */
+  animation: 
+    cycle2 90s linear infinite,
+    driftDown 55s linear infinite !important;     /* Faster and stronger upward drift */
 }
