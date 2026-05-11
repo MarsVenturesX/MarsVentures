@@ -874,26 +874,10 @@ body {
     gap: 12px;
   }
 
-  /* Make "Book a Call" button much smaller on mobile */
-  .cta-button {
-    padding: 9px 16px !important;
-    font-size: 13px !important;
-    min-width: auto !important;
-    white-space: nowrap;
-  }
-
   /* Hamburger icon gets its own clean space */
   .main-nav::after {
     right: 20px !important;
     font-size: 30px;
-  }
-
-  /* Optional: hide full button text on very small screens */
-  @media (max-width: 480px) {
-    .cta-button {
-      padding: 8px 12px !important;
-      font-size: 12px !important;
-    }
   }
 }
 
@@ -902,15 +886,6 @@ body {
   .nav-container {
     padding: 16px 20px !important;
     position: relative;
-  }
-
-  /* Push button left and give it space */
-  .cta-button {
-    margin-left: auto !important;
-    margin-right: 62px !important;     /* Space for hamburger */
-    padding: 9px 18px !important;
-    font-size: 13px !important;
-    border-radius: 9999px;
   }
 
   /* Hamburger icon - strong right positioning */
@@ -929,13 +904,6 @@ body {
 
 /* ====================== MOBILE: Keep "Book a Call" button full size ====================== */
 @media (max-width: 768px) {
-
-  /* 1. Keep button large and premium (same size as desktop) */
-  .cta-button {
-    padding: 12px 28px !important;     /* Keep original padding */
-    font-size: 14px !important;        /* Only slightly smaller text */
-    min-width: auto !important;
-  }
 
   /* 2. Only downscale the logo text (as requested) */
   .logo-text {
