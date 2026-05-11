@@ -1061,3 +1061,149 @@ a:hover {
 .cta-button-nav:hover {
   color: #000 !important;
 }
+
+/* ====================== TEXT BOLD ON HOVER ====================== */
+
+/* All hyperlinks become bold on hover */
+a:hover {
+  font-weight: 700 !important;
+  transition: font-weight 0.2s ease;
+}
+
+/* Optional: Only make navigation menu items bold on hover */
+.nav-menu a:hover {
+  font-weight: 700 !important;
+}
+
+/* ====================== TESTIMONIALS PINNED AT BOTTOM OF HERO ====================== */
+.testimonials-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 0 30px;
+  background: linear-gradient(to top, rgba(5,7,12,0.95), transparent 70%);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 32px;
+  animation: marqueeScroll 50s linear infinite;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 28px 32px;
+  min-width: 420px;
+  height: auto;                    /* Allow cards to grow vertically */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+}
+
+.testimonial-card p {
+  font-size: 17px;
+  line-height: 1.65;               /* Better readability for multi-line */
+  margin-bottom: 22px;
+  white-space: normal;             /* ← This is the key fix */
+  color: rgba(255,255,255,0.92);
+  font-style: italic;
+}
+
+.testimonial-card strong {
+  display: block;
+  color: #a0b8ff;
+  font-size: 15px;
+}
+
+.testimonial-card span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .testimonials-bottom {
+    padding: 30px 0 20px;
+  }
+  .testimonial-card {
+    min-width: 340px;
+    padding: 20px 26px;
+  }
+}
+
+/* ====================== FIX: HERO CARD OVERLAP WITH TESTIMONIALS ====================== */
+.hero--home {
+  padding-bottom: 220px !important;     /* Creates safe space at bottom */
+}
+
+.hero--home .card {
+  margin-bottom: 40px !important;       /* Moves the card slightly upward */
+}
+
+/* Make sure testimonials sit cleanly at the very bottom */
+.testimonials-bottom {
+  bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.testimonial-card p::before {
+  content: '“';
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.3;
+  margin-right: 4px;
+}
+
+.testimonial-card p::after {
+  content: '”';
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.3;
+}
+
+/* ====================== HERO CARD - WIDER TEXT + SHORTER HEIGHT ====================== */
+.hero--home .card {
+  max-width: 980px !important;           /* Slightly wider card */
+  padding: 48px 40px 40px !important;    /* Reduce left/right padding */
+}
+
+.hero--home .card p[style*="max-width: 680px"] {
+  max-width: 820px !important;           /* Wider subtitle line */
+  font-size: 21px !important;
+  line-height: 1.4;
+}
+
+.hero--home .card .subtitle {
+  max-width: 780px !important;           /* Wider long paragraph */
+  font-size: 18px !important;
+  line-height: 1.65;
+  margin: 12px auto 32px !important;
+}
+
+/* Make the card more compact vertically */
+.hero--home .card h1 {
+  margin-bottom: 8px !important;
+}
+
+.slogan-image {
+  margin: 20px auto 18px !important;     /* Pull slogan closer */
+}
