@@ -1307,7 +1307,7 @@ a:hover {
 
 /* ====================== HERO CARD SPACING - MORE SPACE AT TOP, LESS ABOVE CARD ====================== */
 .hero--home {
-  padding-top: 65px !important;      /* Reduced space between nav and card */
+  padding-top: 70px !important;      /* Reduced space between nav and card */
   padding-bottom: 210px !important;  /* Keeps space for testimonials */
 }
 
@@ -1319,4 +1319,16 @@ a:hover {
 /* Optional fine-tuning for the title */
 .hero--home .card h1 {
   margin-bottom: 12px !important;
+}
+
+/* ====================== TESTIMONIALS - SLIGHTLY SMALLER TEXT ====================== */
+.testimonial-card p {
+  font-size: 14px !important;     /* Reduced from 17px */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card p {
+    font-size: 14px !important;     /* Even slightly smaller on mobile */
+  }
 }
