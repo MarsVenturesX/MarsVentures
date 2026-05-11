@@ -947,3 +947,27 @@ body {
     max-height: 42px !important;
   }
 }
+
+/* ====================== SLOGAN IMAGE - BOLD & ATTENTION-GRABBING ====================== */
+.slogan-image {
+  display: block;
+  margin: 28px auto 20px;
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 25px rgba(160, 184, 255, 0.35));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slogan-image:hover {
+  transform: scale(1.08);           /* Premium scale on hover */
+  filter: drop-shadow(0 15px 35px rgba(160, 184, 255, 0.5));
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .slogan-image {
+    max-width: 420px;
+    margin: 24px auto 18px;
+  }
+}
