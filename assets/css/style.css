@@ -1207,3 +1207,24 @@ a:hover {
 .slogan-image {
   margin: 20px auto 18px !important;     /* Pull slogan closer */
 }
+
+/* ====================== CONTACT FORM BUTTON - MATCH CTA STYLE ====================== */
+.cta-button[type="submit"] {
+  background: linear-gradient(90deg, #a0b8ff, #7b9eff) !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  border: none !important;
+}
+
+.cta-button[type="submit"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(160, 184, 255, 0.4) !important;
+}
+
+/* ====================== REMOVE UPPERCASE FROM CTA BUTTONS ====================== */
+.cta-button,
+.cta-button-nav,
+.cta-button[type="submit"] {
+  text-transform: none !important;
+}
