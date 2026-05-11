@@ -1010,3 +1010,54 @@ body {
     will-change: auto !important;
   }
 }
+
+/* ====================== FOUNDER PHOTO - WHITE CIRCLE + RED SEGMENT ====================== */
+.founder-frame {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 40px auto 50px;
+  background: #ffffff;                    /* White circle */
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.founder-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Red segment (~1/8 of the circle) */
+.founder-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 78%;
+  height: 78%;
+  background: transparent;
+  border-bottom: 26px solid #e63939;      /* Red color */
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(22deg); /* Adjust angle to change red section size */
+  pointer-events: none;
+}
+
+/* ====================== ALL HYPERLINKS - RED HOVER ====================== */
+a {
+  transition: color 0.3s ease;        /* smooth color change */
+}
+
+a:hover {
+  color: #ff0030 !important;
+}
+
+/* Optional: Keep CTA buttons dark (they look better with black text) */
+.cta-button:hover,
+.cta-button-nav:hover {
+  color: #000 !important;
+}
