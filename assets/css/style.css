@@ -1270,3 +1270,53 @@ a:hover {
   font-size: 13px;
   opacity: 0.65;
 }
+
+/* ====================== COMPACT HERO CARD - NO OVERLAP WITH TESTIMONIALS ====================== */
+.hero--home .card {
+  padding: 12px 40px 36px !important;     /* Reduced top & bottom padding */
+  margin-bottom: 40px !important;
+}
+
+/* Tighten internal spacing */
+.hero--home .card h1 {
+  margin-bottom: 10px !important;
+}
+
+.slogan-image {
+  margin: 18px auto 14px !important;      /* Pull slogan closer */
+}
+
+.hero--home .card p[style*="max-width"] {
+  margin: 12px auto 22px !important;      /* Subtitle */
+}
+
+.hero--home .card .subtitle {
+  margin: 8px auto 32px !important;       /* Long paragraph */
+  line-height: 1.55;
+}
+
+/* Buttons area */
+.hero--home .card > div[style*="display:flex"] {
+  margin-bottom: 24px !important;
+}
+
+/* Make sure footer inside card has minimal spacing */
+.hero--home .card .footer {
+  margin-top: 40px !important;
+}
+
+/* ====================== HERO CARD SPACING - MORE SPACE AT TOP, LESS ABOVE CARD ====================== */
+.hero--home {
+  padding-top: 65px !important;      /* Reduced space between nav and card */
+  padding-bottom: 210px !important;  /* Keeps space for testimonials */
+}
+
+.hero--home .card {
+  padding-top: 58px !important;      /* Increased internal top padding (more space above "Mars Ventures") */
+  padding-bottom: 42px !important;
+}
+
+/* Optional fine-tuning for the title */
+.hero--home .card h1 {
+  margin-bottom: 12px !important;
+}
