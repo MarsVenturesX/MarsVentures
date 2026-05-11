@@ -939,3 +939,49 @@ body {
     margin: 24px auto 18px;
   }
 }
+
+/* ====================== FINAL MOBILE NAV - NO OVERLAP ====================== */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 16px 20px !important;
+    position: relative;
+    align-items: center;
+  }
+
+  /* Group button + hamburger on the right */
+  .cta-button {
+    margin-left: auto !important;
+    margin-right: 68px !important;   /* Safe space for hamburger */
+    padding: 11px 22px !important;
+    font-size: 14px !important;
+  }
+
+  /* Hamburger - strong right position */
+  .main-nav::after {
+    content: "☰";
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    cursor: pointer;
+  }
+}
+
+/* ====================== HOME CARD - NEVER EXCEEDS SCREEN ====================== */
+@media (max-width: 768px) {
+  .hero--home {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;           /* Prevents creeping */
+  }
+
+  .card {
+    max-height: calc(100vh - 80px) !important;   /* Leaves space for nav */
+    overflow-y: auto !important;                 /* Scroll inside card if needed */
+    margin: 70px 16px 20px !important;           /* Safe top/bottom margin */
+    padding: 40px 24px !important;
+  }
+}
