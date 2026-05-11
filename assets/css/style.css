@@ -1343,3 +1343,10 @@ a:hover {
   right: 0;
   z-index: 2;
 }
+
+/* ====================== HIDE TESTIMONIALS ON MOBILE ====================== */
+@media (max-width: 768px) {
+  .testimonials-bottom {
+    display: none !important;
+  }
+}
