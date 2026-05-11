@@ -1343,23 +1343,3 @@ a:hover {
   right: 0;
   z-index: 2;
 }
-
-/* Mobile: Make testimonials normal flow (strictly below card) */
-@media (max-width: 768px) {
-  .hero--home {
-    padding-bottom: 0 !important;           /* Remove forced bottom padding */
-    min-height: auto !important;
-  }
-
-  .testimonials-bottom {
-    position: relative !important;          /* Important: normal flow */
-    bottom: auto !important;
-    padding: 60px 20px 40px !important;
-    background: rgba(5, 7, 12, 0.95) !important;
-    margin-top: -20px;                      /* Slight overlap removal */
-  }
-
-  .hero--home .card {
-    margin-bottom: 0 !important;
-  }
-}
