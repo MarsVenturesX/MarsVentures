@@ -1228,3 +1228,35 @@ a:hover {
 .cta-button[type="submit"] {
   text-transform: none !important;
 }
+
+/* ====================== TESTIMONIALS - MOBILE ADAPTIVE DESIGN ====================== */
+@media (max-width: 768px) {
+
+  /* Give the hero more breathing room at the bottom */
+  .hero--home {
+    padding-bottom: 340px !important;     /* Extra space for testimonials */
+    min-height: 100vh !important;
+  }
+
+  /* Make testimonial cards smaller and more mobile-friendly */
+  .testimonial-card {
+    min-width: 300px !important;
+    padding: 20px 24px !important;
+    font-size: 15.5px !important;
+  }
+
+  .testimonial-card p {
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Testimonials section */
+  .testimonials-bottom {
+    padding: 30px 0 40px !important;
+    background: linear-gradient(to top, rgba(5,7,12,0.98), transparent 80%);
+  }
+
+  .marquee-content {
+    gap: 20px !important;
+  }
+}
