@@ -984,3 +984,29 @@ body {
     display: none !important;
   }
 }
+
+/* ====================== PERFORMANCE OPTIMIZATION - MOBILE ====================== */
+@media (max-width: 768px) {
+
+  /* Reduce heavy animations on mobile */
+  .bg-earth,
+  .bg-mars-league,
+  .bg-stars,
+  .bg-mars-horizon,
+  .bg-nebula {
+    animation-duration: 0s !important;           /* Pause movement */
+    background-size: cover !important;
+  }
+
+  /* Keep only very light opacity cycle */
+  .bg-earth { animation: cycle1 90s linear infinite !important; }
+  .bg-mars-league { animation: cycle2 90s linear infinite !important; }
+  .bg-stars { animation: cycle3 90s linear infinite !important; }
+  .bg-mars-horizon { animation: cycle4 90s linear infinite !important; }
+  .bg-nebula { animation: cycle5 90s linear infinite !important; }
+
+  /* Reduce GPU load */
+  .space-bg * {
+    will-change: auto !important;
+  }
+}

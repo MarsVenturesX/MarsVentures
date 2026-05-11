@@ -23,6 +23,13 @@
 
     <link rel="stylesheet" href="assets/css/cursor.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    /* Preload critical images */
+    <link rel="preload" href="/assets/png/earth-horizon.png" as="image">
+    <link rel="preload" href="/assets/png/stars.png" as="image">
+    <link rel="preload" href="/assets/png/mars-league.png" as="image">
+    <link rel="preload" href="/assets/png/nebula.png" as="image">
+    <link rel="preload" href="/assets/png/mars-horizon.png" as="image">
 </head>
 
 <body>
@@ -148,18 +155,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer">© <span id="year"></span> Mars Ventures by <a href="https://roycemars.com">Royce Mars</a> •
-        All rights reserved</div>
+                <div class="footer">© <span id="year"></span> Mars Ventures by <a href="https://roycemars.com">Royce
+                        Mars</a> •
+                    All rights reserved</div>
         </section>
     </main>
 
     <script>
-  // Simple hamburger toggle
-  document.querySelector('.main-nav').addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' || window.innerWidth > 768) return;
-    this.classList.toggle('open');
-  });
-</script>
+        // Simple hamburger toggle
+        document.querySelector('.main-nav').addEventListener('click', function (e) {
+            if (e.target.tagName === 'A' || window.innerWidth > 768) return;
+            this.classList.toggle('open');
+        });
+    </script>
     <script src="assets/js/cursor.js" defer></script>
 </body>
 

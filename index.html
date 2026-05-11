@@ -14,7 +14,6 @@
   <meta name="apple-mobile-web-app-title" content="Mars" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Orbitron -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,6 +21,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/cursor.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  /* Preload critical images */
+  <link rel="preload" href="/assets/png/earth-horizon.png" as="image">
+  <link rel="preload" href="/assets/png/stars.png" as="image">
+  <link rel="preload" href="/assets/png/mars-league.png" as="image">
+  <link rel="preload" href="/assets/png/nebula.png" as="image">
+  <link rel="preload" href="/assets/png/mars-horizon.png" as="image">
 </head>
 
 <body>
@@ -29,7 +35,7 @@
     <div class="bg-earth"></div>
     <div class="bg-mars-league"></div>
     <div class="bg-stars"></div>
-    <div class="bg-mars-horizon"></div>  
+    <div class="bg-mars-horizon"></div>
     <div class="bg-nebula"></div>
   </div>
 
@@ -63,10 +69,8 @@
         Mars Ventures
       </h1>
 
-    <!-- NEW SLOGAN IMAGE -->
-    <img src="assets/png/shoot-for-the-stars.png" 
-         alt="Shoot for the Stars" 
-         class="slogan-image">
+      <!-- NEW SLOGAN IMAGE -->
+      <img src="assets/png/shoot-for-the-stars.png" alt="Shoot for the Stars" class="slogan-image">
 
       <p style="font-size: 22px; max-width: 680px; margin: 16px auto 32px;">
         Fractional CTO • AI • Mobile • Web • Cloud Architecture • Extended Reality • Global Scale
@@ -166,12 +170,12 @@
     });
   </script>
   <script>
-  // Simple hamburger toggle
-  document.querySelector('.main-nav').addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' || window.innerWidth > 768) return;
-    this.classList.toggle('open');
-  });
-</script>
+    // Simple hamburger toggle
+    document.querySelector('.main-nav').addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' || window.innerWidth > 768) return;
+      this.classList.toggle('open');
+    });
+  </script>
   <script src="assets/js/cursor.js" defer></script>
 </body>
 
