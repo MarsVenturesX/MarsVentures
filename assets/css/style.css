@@ -1376,3 +1376,26 @@ a:hover {
     margin-top: 0 !important;
   }
 }
+
+/* ====================== HIDE TESTIMONIALS ON MOBILE ====================== */
+@media (max-width: 768px) {
+  .testimonials-bottom {
+    display: none !important;
+  }
+}
+
+/* ====================== FIX OVERSROLL + BLANK SPACE ON NON-HOME PAGES ====================== */
+.hero--page {
+  padding-top: 90px !important;      /* Reduced from 130px */
+  padding-bottom: 80px !important;   /* Clean bottom padding */
+  min-height: 100vh !important;
+}
+
+.hero--page .card {
+  margin-bottom: 40px !important;
+}
+
+/* Prevent extra scrolling / blank space */
+html, body {
+  overscroll-behavior-y: contain !important;
+}
