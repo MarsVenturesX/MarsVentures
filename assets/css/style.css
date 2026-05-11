@@ -1350,3 +1350,29 @@ a:hover {
     display: none !important;
   }
 }
+
+/* ====================== HERO CARD MOBILE SPACING FIX ====================== */
+@media (max-width: 768px) {
+  
+  .hero--home {
+    padding-top: 90px !important;      /* More space between nav and card */
+    padding-bottom: 140px !important;  /* Enough space before testimonials */
+  }
+
+  .hero--home .card {
+    padding-top: 52px !important;      /* More internal space above "Mars Ventures" */
+    padding-bottom: 40px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+/* ====================== REDUCE SPACE ABOVE CARD ON MOBILE ====================== */
+@media (max-width: 768px) {
+  .hero--page {
+    padding-top: 85px !important;     /* Reduced from 130px */
+  }
+
+  .hero--page .card {
+    margin-top: 0 !important;
+  }
+}
