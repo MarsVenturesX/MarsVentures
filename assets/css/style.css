@@ -1399,3 +1399,127 @@ a:hover {
 html, body {
   overscroll-behavior-y: contain !important;
 }
+
+/* ====================== FINAL OVERSROLL FIX - NO BLANK SPACE ====================== */
+
+html, body {
+  height: 100% !important;
+  min-height: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: contain !important;
+}
+
+.hero--page {
+  min-height: 100vh !important;
+  padding-top: 85px !important;     /* Reduced top padding */
+  padding-bottom: 70px !important;  /* Clean small bottom padding */
+}
+
+.hero--page .card {
+  margin-bottom: 40px !important;
+}
+
+/* Mobile tightening */
+@media (max-width: 768px) {
+  .hero--page {
+    padding-top: 78px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* ====================== PREMIUM SERVICE VISUAL (Futuristic Icon Container) ====================== */
+.service-visual {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(0,0,0,0.25));
+  border: 1px solid rgba(160, 184, 255, 0.25);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    inset 0 2px 8px rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.service-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(90deg, transparent, rgba(160,184,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-visual:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 
+    0 20px 40px rgba(160, 184, 255, 0.25),
+    inset 0 2px 12px rgba(255,255,255,0.2);
+}
+
+.service-visual:hover::before {
+  opacity: 1;
+}
+
+.service-visual img,
+.service-visual svg {
+  width: 52px;
+  height: 52px;
+  filter: brightness(1.1);
+  transition: transform 0.4s ease;
+}
+
+.service-visual:hover img,
+.service-visual:hover svg {
+  transform: scale(1.15);
+}
+
+/* ====================== PREMIUM SERVICE PICTURE - RECTANGLE GLASS ====================== */
+.service-picture {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16 / 9;           /* or 4/3 if you prefer */
+  margin: 0 auto 28px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.09), rgba(10,15,35,0.65));
+  border: 1px solid rgba(160, 184, 255, 0.35);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    inset 0 3px 12px rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.service-picture:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 25px 50px rgba(160, 184, 255, 0.35),
+    inset 0 4px 18px rgba(255,255,255,0.25);
+}
+
+.service-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-picture:hover img {
+  transform: scale(1.08);
+}
