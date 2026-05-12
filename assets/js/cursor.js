@@ -51,7 +51,7 @@
   window.addEventListener('mouseenter', () => { dot.style.opacity = '1'; }, { passive: true });
 
   function isInteractive(el) {
-    return el && el.closest('a, button, [role="button"], input, textarea, select, summary, .slogan-image');
+    return el && el.closest('a, button, [role="button"], input, textarea, select, summary, .slogan-image, .premium-card');
   }
 
   let hoverCount = 0;

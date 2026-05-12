@@ -3,7 +3,7 @@
 
 :root{
   --cursor-size: 10px;
-  --cursor-hover-scale: 2.2;     /* how much bigger over links */
+  --cursor-hover-scale: 1.8;     /* how much bigger over links */
   --cursor-down-scale: 0.8;      /* click feedback */
   --cursor-color: 255,0,48;    /* red */
   --cursor-ring-opacity: 0.35;
