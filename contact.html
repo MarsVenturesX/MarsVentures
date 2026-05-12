@@ -202,6 +202,7 @@
 
                 if (response.ok) {
                     // Success
+                    form.classList.add("form-hidden");
                     form.style.display = "none";           // Hide the form
                     successMsg.style.display = "block";    // Show success message
                     form.reset();                          // Clear the form

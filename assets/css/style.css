@@ -1544,6 +1544,10 @@ html, body {
   min-height: 520px;                    /* Keeps space for the form */
 }
 
+.form-hidden {
+  display: none !important;
+}
+
 #successMessage.success-message {
   position: absolute;
   top: 60px;                            /* Small elegant margin from top */
