@@ -1537,3 +1537,34 @@ html, body {
 .logo:hover {
   transform: scale(1.06);
 }
+
+/* ====================== FORM WRAPPER + HORIZONTALLY CENTERED SUCCESS ====================== */
+.form-wrapper {
+  position: relative;
+  min-height: 520px;                    /* Keeps space for the form */
+}
+
+#successMessage.success-message {
+  position: absolute;
+  top: 60px;                            /* Small elegant margin from top */
+  left: 50%;
+  transform: translateX(-50%);          /* Center only horizontally */
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  padding: 42px 30px;
+  background: rgba(160, 184, 255, 0.12);
+  border: 1px solid rgba(160, 184, 255, 0.3);
+  border-radius: 22px;
+  color: #a0b8ff;
+  font-size: 19px;
+  line-height: 1.5;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  display: none;
+  animation: successPop 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes successPop {
+  0%   { opacity: 0; transform: translateX(-50%) scale(0.95); }
+  100% { opacity: 1; transform: translateX(-50%) scale(1); }
+}
