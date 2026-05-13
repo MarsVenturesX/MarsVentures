@@ -1572,3 +1572,30 @@ html, body {
   0%   { opacity: 0; transform: translateX(-50%) scale(0.95); }
   100% { opacity: 1; transform: translateX(-50%) scale(1); }
 }
+
+/* ====================== FIX HERO CARD CREEPING UNDER NAV BAR ====================== */
+.hero--home {
+  padding-top: 120px !important;     /* Desktop - clean space below nav */
+}
+
+@media (max-width: 768px) {
+  .hero--home {
+    padding-top: 180px !important;   /* Mobile - extra space for taller nav */
+  }
+}
+
+/* ====================== REDUCE TESTIMONIAL CARD HEIGHT + CLEAN SPACING ====================== */
+.testimonial-card {
+  padding: 20px 20px !important;     /* Reduced padding */
+  min-height: auto !important;
+}
+
+.testimonial-card p {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  margin-bottom: 18px !important;    /* Less space after quote */
+}
+
+.testimonials-bottom {
+  padding-top: 60px !important;      /* Nice margin above the testimonials */
+}
