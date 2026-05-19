@@ -1606,7 +1606,7 @@ html, body {
   width: 100%;
   max-width: 820px;           /* Large but elegant on desktop */
   height: auto;
-  margin: 0 auto 28px;        /* Centered + nice spacing below */
+  margin: 0 auto 8px;        /* Centered + nice spacing below */
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1621,4 +1621,31 @@ html, body {
     max-width: 92%;
     margin-bottom: 20px;
   }
+}
+
+/* ====================== TIGHTEN SPACE AROUND BIG MARS VENTURES IMAGE ====================== */
+
+/* Reduce space above and below the big logo */
+.hero-title-image {
+  margin: 8px auto 8px !important;     /* Much tighter top & bottom */
+}
+
+/* Reduce gap between big logo and "SHOOT FOR THE STARS" */
+.slogan-image {
+  margin: 8px auto 16px !important;    /* Tighter spacing */
+}
+
+/* Make the whole card more compact on home page */
+.hero--home .card {
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+}
+
+/* Optional: slightly reduce internal text spacing for even cleaner look */
+.hero--home .card p[style*="max-width: 680px"] {
+  margin: 8px auto 20px !important;
+}
+
+.hero--home .card .subtitle {
+  margin: 8px auto 24px !important;
 }
