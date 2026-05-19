@@ -1599,3 +1599,26 @@ html, body {
 .testimonials-bottom {
   padding-top: 60px !important;      /* Nice margin above the testimonials */
 }
+
+/* ====================== LARGE CENTERED HERO TITLE IMAGE ====================== */
+.hero-title-image {
+  display: block;
+  width: 100%;
+  max-width: 820px;           /* Large but elegant on desktop */
+  height: auto;
+  margin: 0 auto 28px;        /* Centered + nice spacing below */
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-title-image:hover {
+  transform: scale(1.015);    /* Very subtle premium hover */
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .hero-title-image {
+    max-width: 92%;
+    margin-bottom: 20px;
+  }
+}
