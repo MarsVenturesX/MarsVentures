@@ -1848,7 +1848,6 @@ html, body {
 
 .logo-text {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 28px;
@@ -3027,4 +3026,144 @@ main.hero.hero--home:has(.contact-page) {
   margin-bottom: 20px;
 }
 
+/* =========================================================
+   SERVICES PAGE – make footer visible
+   ========================================================= */
+
+main.hero.hero--home:has(.services-page) {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+.services-page {
+  padding-top: 200px !important;
+  padding-bottom: 60px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+/* Force footer into normal flow and visible */
+.hero--home:has(.services-page) .site-footer {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  margin: 60px auto 50px !important;
+  padding: 20px 0 !important;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  z-index: 10 !important;
+}
+
+/* =========================================================
+   SERVICES PAGE – taller scrollable area + visible footer
+   ========================================================= */
+
+main.hero.hero--home:has(.services-page) {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+.services-page {
+  padding-top: 180px !important;
+  padding-bottom: 100px !important;   /* space before footer */
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+.services-page .hero-content-left {
+  position: relative !important;
+  top: 0 !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force footer into normal document flow */
+.hero--home:has(.services-page) .site-footer {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  margin: 40px auto 50px !important;
+  padding: 20px 0 !important;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  z-index: 10 !important;
+}
+
+/* Ensure the page can scroll */
+html, body {
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+/* =========================================================
+   SERVICES PAGE – taller scrollable area + visible footer
+   ========================================================= */
+
+main.hero.hero--home:has(.services-page) {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+.services-page {
+  padding-top: 180px !important;
+  padding-bottom: 100px !important;   /* space before footer */
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+.services-page .hero-content-left {
+  position: relative !important;
+  top: 0 !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force footer into normal document flow */
+.hero--home:has(.services-page) .site-footer {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  margin: 40px auto 50px !important;
+  padding: 20px 0 !important;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  z-index: 10 !important;
+}
+
+/* Ensure the page can scroll */
+html, body {
+  overflow-y: auto !important;
+  height: auto !important;
+}
 
