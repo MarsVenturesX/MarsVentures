@@ -2965,3 +2965,66 @@ main.hero.hero--home:has(.services-page) {
     0 0 40px rgba(255, 0, 48, 0.3),
     0 12px 30px rgba(0, 0, 0, 0.4) !important;
 }
+
+/* =========================================================
+   CONTACT PAGE – same full-viewport behavior as Landing
+   ========================================================= */
+
+main.hero.hero--home:has(.contact-page) {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+/* Content area fills the available space */
+.hero--home:has(.contact-page) .contact-page {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;          /* clears the fixed nav */
+  padding-bottom: 80px;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;
+}
+
+/* Footer stuck to the bottom of the viewport */
+.hero--home:has(.contact-page) .site-footer {
+  position: absolute !important;
+  bottom: 28px !important;
+  left: 0;
+  right: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Prevent rubber-banding */
+.hero--home:has(.contact-page) {
+  overscroll-behavior: none;
+}
+
+/* Make the message textarea less tall */
+.contact-page .premium-form textarea {
+  min-height: 120px !important;   /* reduced from 140–260px */
+  height: 180px;
+  resize: vertical;
+}
+
+/* Reduce space above the Send Message button */
+.contact-page .premium-form .cta-primary,
+.contact-page .premium-form button.cta-primary {
+  margin-top: 12px !important;    /* tighter spacing */
+}
+
+/* Optional – also reduce overall form bottom margin */
+.contact-page .premium-form {
+  margin-bottom: 20px;
+}
+
+
