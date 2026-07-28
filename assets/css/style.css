@@ -1839,3 +1839,72 @@ html, body {
   border-color: #e31c23 !important;
   color: #ffffff !important;
 }
+
+/* ===== Top Navigation – consistent with hero ===== */
+
+.main-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.nav-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.25s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+/* Book a Call button in the nav */
+.cta-button-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+}
+
+.cta-button-nav:hover {
+  background: #e31c23;
+  color: #ffffff !important;
+}
+
+/* ===== Nav “Book a Call” button – same style as landing page ===== */
+.cta-button-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  
+  background: #ffffff;              /* Solid white like landing page */
+  color: #000000;
+  padding: 11px 24px;
+  border-radius: 6px;               /* Matches landing page buttons */
+  border: none;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta-button-nav:hover {
+  background: #e31c23;              /* Same red */
+  color: #ffffff !important;
+}
