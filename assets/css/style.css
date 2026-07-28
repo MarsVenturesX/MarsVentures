@@ -2119,3 +2119,562 @@ html, body {
               0 0 40px rgba(227, 28, 35, 0.3),
               0 4px 15px rgba(227, 28, 35, 0.4);
 }
+
+/* ===== About Page ===== */
+.about-page {
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.founder-block {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.founder-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 18px;
+}
+
+.founder-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.founder-name a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.founder-name a:hover {
+  color: #e31c23;
+}
+
+.about-text {
+  max-width: 780px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 70px;
+}
+
+.about-text p {
+  margin-bottom: 24px;
+}
+
+.about-text strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: clamp(24px, 4vw, 32px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 70px;
+}
+
+.about-cta {
+  margin-top: 20px;
+}
+
+/* Make sure the primary button matches landing page */
+.about-cta .cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Make pages properly scrollable ===== */
+html, body {
+  height: auto !important;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+}
+
+.hero,
+.hero--home,
+.hero--page {
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+  position: relative;
+}
+
+/* About & Contact specific */
+.about-page,
+.contact-page {
+  padding-top: 160px;
+  padding-bottom: 120px;
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+}
+
+.hero-content-left {
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+  padding-bottom: 60px;
+}
+
+/* Ensure footer stays at the bottom of the content */
+.site-footer {
+  position: relative;
+  margin-top: 60px;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  overflow-y: scroll !important;
+  height: auto !important;
+}
+
+.space-bg {
+  position: fixed;          /* Keep background fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main.hero {
+  position: relative;
+  z-index: 1;
+  height: auto !important;
+  min-height: 100vh;
+}
+
+/* ===== Fix About page visibility & scrolling ===== */
+html, body {
+  height: auto !important;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+}
+
+.space-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+main.hero,
+.hero--home {
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+.about-page {
+  padding-top: 180px !important;   /* pushes content below fixed nav */
+  padding-bottom: 100px;
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+}
+
+.about-page .hero-content-left {
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Make sure the large headline is visible */
+.about-page .hero-headline {
+  display: block !important;
+  margin-top: 0 !important;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .section-title {
+  display: block !important;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.about-page .hero-headline,
+.about-page .section-title {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ===== Footer – always at the bottom, full width, centered ===== */
+.site-footer {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: auto !important;
+  margin: 80px auto 40px !important;
+  padding: 20px 0 !important;
+  text-align: center !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+main.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.about-page {
+  flex: 1 0 auto;          /* takes available space */
+}
+
+.site-footer {
+  flex-shrink: 0;          /* stays at the bottom */
+}
+
+/* ===== Global layout that prevents empty space ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+}
+
+.space-bg {
+  position: fixed !important;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Main container */
+main.hero {
+  position: relative;
+  z-index: 1;
+  display: block !important;          /* remove flex if it was causing issues */
+  min-height: 100vh;
+  height: auto !important;
+  padding: 0;
+  margin: 0;
+}
+
+/* About section */
+.about-page {
+  padding-top: 180px;
+  padding-bottom: 60px;
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Footer – normal flow, always after content */
+.site-footer {
+  position: relative !important;
+  display: block;
+  width: 100%;
+  margin: 40px auto 50px;
+  padding: 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+
+/* Make sure nothing is pulling the footer up */
+.site-footer,
+.about-page,
+.hero-content-left {
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
+/* =========================================================
+   CLEAN LAYOUT SYSTEM – About & Contact pages
+   (no conflicts, proper scrolling, footer at bottom)
+   ========================================================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Fixed space background */
+.space-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Main wrapper */
+main.hero {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-height: 100vh;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* Full-screen style sections (About + Contact) */
+.hero-fullscreen,
+.about-page,
+.contact-page {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  padding: 160px 8vw 80px;   /* 160px clears the fixed nav */
+  margin: 0;
+  overflow: visible;
+}
+
+/* Content container */
+.hero-content-left {
+  position: relative;
+  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  top: auto;
+  transform: none;
+}
+
+/* Headlines always visible */
+.hero-headline,
+.section-title {
+  display: block;
+  position: relative;
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Footer – normal document flow, always after content */
+.site-footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 60px auto 50px;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-fullscreen,
+  .about-page,
+  .contact-page {
+    padding: 140px 6vw 60px;
+  }
+}
+
+/* =========================================================
+   FINAL ABOUT PAGE FIX – make all content + headers visible
+   ========================================================= */
+
+/* Override the landing-page hero styles that are breaking About */
+main.hero.hero--home {
+  height: auto !important;
+  min-height: 100vh !important;
+  display: block !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* About section – clear the fixed nav */
+.about-page.hero-fullscreen {
+  padding-top: 200px !important;   /* increase if still clipped */
+  padding-bottom: 80px !important;
+  min-height: auto !important;
+  height: auto !important;
+  display: block !important;
+  align-items: flex-start !important;
+  overflow: visible !important;
+}
+
+/* Make sure the big headline is fully shown */
+.about-page .hero-headline {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  line-height: 0.9 !important;
+  position: relative !important;
+  top: 0 !important;
+  transform: none !important;
+}
+
+.about-page .section-title {
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;
+}
+
+/* Content container */
+.about-page .hero-content-left {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+/* Footer stays after content */
+.site-footer {
+  position: relative !important;
+  margin: 60px auto 40px !important;
+  text-align: center;
+}
+
+.about-page .hero-content-left {
+  max-width: 900px;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.about-page .founder-block,
+.about-page .about-text,
+.about-page .about-cta {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+}
+
+.about-page .about-text p {
+  margin-left: 0 !important;
+  max-width: 100%;
+}
+
+/* Founder photo – zoom + red glow on hover */
+.founder-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.founder-photo:hover {
+  transform: scale(1.08);                         
+  border-color: #ff0030;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 48, 0.6),
+    0 0 40px rgba(255, 0, 48, 0.35),
+    0 0 60px rgba(255, 0, 48, 0.2);
+}
+
+/* =========================================================
+   FINAL LOCK – About page titles always visible + scrollable
+   ========================================================= */
+
+main.hero.hero--home {
+  height: auto !important;
+  min-height: 100vh !important;
+  display: block !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.about-page {
+  display: block !important;
+  position: relative !important;
+  padding-top: 220px !important;   /* ← increase this if still cut off */
+  padding-bottom: 100px !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+.about-page .hero-content-left {
+  position: relative !important;
+  top: 0 !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.about-page .hero-headline {
+  display: block !important;
+  position: relative !important;
+  top: 0 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 5 !important;
+}
+
+.about-page .section-title {
+  display: block !important;
+  position: relative !important;
+  top: 0 !important;
+  margin: 0 0 40px 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Make the whole page scrollable */
+html, body {
+  overflow-y: auto !important;
+  height: auto !important;
+}
