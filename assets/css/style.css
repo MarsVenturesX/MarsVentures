@@ -1649,3 +1649,193 @@ html, body {
 .hero--home .card .subtitle {
   margin: 8px auto 24px !important;
 }
+
+/* ===== SpaceX-style full-screen hero ===== */
+.hero-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content-left {
+  max-width: 680px;
+}
+
+/* .hero-headline {
+  font-family: 'Science Gothic', sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 9vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 28px 0;
+  text-transform: uppercase;
+} */
+
+.hero-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;                
+  font-size: clamp(56px, 11vw, 120px);
+  line-height: 0.88;
+  letter-spacing: 0.04em;          
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 32px 0;
+  font-feature-settings: "ss01";    
+} 
+/* 
+.hero-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;                 
+  font-size: clamp(64px, 12vw, 140px);
+  line-height: 0.85;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 36px 0;
+} */
+
+.hero-subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: 0 0 40px 0;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-primary:hover {
+  background: #e8e8e8;
+}
+
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+  z-index: 5;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-fullscreen {
+    padding: 0 6vw;
+    padding-top: 100px;
+  }
+  
+  .hero-headline {
+    font-size: clamp(40px, 12vw, 64px);
+  }
+}
+
+/* Primary button (Book a Call) */
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.cta-primary:hover {
+  background: #ff0030;          /* Same strong red as the MAX MARS button */
+  color: #ffffff;               /* White text on hover */
+}
+
+/* Secondary button (Explore Services) */
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.cta-secondary:hover {
+  background: #ff0030;          /* Same red */
+  border-color: #ff0030;
+  color: #ffffff;               /* White text on hover */
+}
+
+.cta-primary:hover {
+  background: #e31c23 !important;
+  color: #ffffff !important;
+}
+
+.cta-primary:hover span,
+.cta-primary:hover .arrow {
+  color: #ffffff !important;
+}
+
+.cta-secondary:hover {
+  background: #e31c23 !important;
+  border-color: #e31c23 !important;
+  color: #ffffff !important;
+}
