@@ -1908,3 +1908,15 @@ html, body {
   background: #e31c23;              /* Same red */
   color: #ffffff !important;
 }
+
+/* Landing page buttons – add the same light-up shadow */
+.cta-primary:hover,
+.cta-secondary:hover {
+  background: #e31c23 !important;
+  border-color: #e31c23 !important;
+  color: #ffffff !important;
+
+  /* Glow underneath (soft red shadow on the ground) */
+  box-shadow: 0 8px 24px rgba(227, 28, 35, 0.55),
+              0 4px 12px rgba(227, 28, 35, 0.35);
+}
