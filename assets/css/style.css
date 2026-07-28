@@ -3306,3 +3306,90 @@ main.hero.hero--home {
   padding: 20px 0 !important;
   z-index: 20 !important;
 }
+
+/* =========================================================
+   SERVICES PAGE – FINAL SCROLL FIX (desktop + mobile)
+   ========================================================= */
+
+/* Kill every height lock */
+html, body {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Force main container open */
+main.hero.hero--home:has(.services-page) {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+  position: relative !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Services section itself */
+.services-page,
+section.services-page,
+.hero-fullscreen.services-page {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+  position: relative !important;
+  padding: 160px 6vw 120px !important;
+  margin: 0 !important;
+}
+
+/* Content wrapper */
+.services-page .hero-content-left {
+  height: auto !important;
+  overflow: visible !important;
+  position: relative !important;
+  top: 0 !important;
+  transform: none !important;
+  max-width: 1100px;
+}
+
+/* Grid must be free */
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 28px !important;
+  height: auto !important;
+  overflow: visible !important;
+  margin-bottom: 60px !important;
+}
+
+/* Footer in normal flow */
+.hero--home:has(.services-page) .site-footer {
+  display: block !important;
+  position: relative !important;
+  bottom: auto !important;
+  margin: 40px auto 50px !important;
+  padding: 20px 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 20 !important;
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 130px 5vw 100px !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .premium-card .service-picture {
+    height: 200px !important;
+  }
+}
